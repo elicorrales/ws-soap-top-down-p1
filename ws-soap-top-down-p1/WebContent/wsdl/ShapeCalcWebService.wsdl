@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	name="ShapeCalculatorWebService" 
+-->
+<wsdl:definitions 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://ws.service.shape.calc.eli.com/" 
+	targetNamespace="http://ws.service.shape.calc.eli.com/" 
+	>
+
+        <wsdl:message name="runAllPendingRequestsNoStopOnError">
+<!--
+            <wsdl:part name="parameters" element="tns:somename" />
+-->
+        </wsdl:message>
+
+<!--
+        <wsdl:message name="runAllPendingRequestsNoStopOnErrorResponse">
+            <wsdl:part name="parameters" element="tns:somename" />
+        </wsdl:message>
+-->
+
+        <wsdl:portType name="ShapeCalculatorWebService">
+            <wsdl:operation name="runAllPendingRequestsNoStopOnError">
+                <wsdl:input name="runAllPendingRequestsNoStopOnError" message="tns:runAllPendingRequestsNoStopOnError">
+                </wsdl:input>
+<!--
+                <wsdl:output name="runAllPendingRequestsNoStopOnErrorResponse" message="tns:runAllPendingRequestsNoStopOnErrorResponse">
+                </wsdl:output>
+-->
+            </wsdl:operation>
+        </wsdl:portType>
+
+
+    <wsdl:binding name="ShapeCalculatorWebServiceSoapBinding" type="tns:ShapeCalculatorWebService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="runAllPendingRequestsNoStopOnError">
+
+<!--
+            <soap:operation soapAction="" style="document"/>
+-->
+
+            <wsdl:input name="runAllPendingRequestsNoStopOnError">
+                <soap:body use="literal"/>
+            </wsdl:input>
+<!--
+            <wsdl:output name="runAllPendingRequestsNoStopOnErrorResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+-->
+
+        </wsdl:operation>
+
+    </wsdl:binding>
+
+
+    <wsdl:service name="ShapeCalculatorWebService">
+        <wsdl:port name="ShapeCalculatorWebServicePort" binding="tns:ShapeCalculatorWebServiceSoapBinding">
+			<!--
+            <soap:address location="http://localhost:8080/web-service-soap-bottom-up/services/ws/ShapeCalculatorWebService"/>
+			-->
+        </wsdl:port>
+    </wsdl:service>
+
+
+</wsdl:definitions>
