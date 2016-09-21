@@ -79,7 +79,7 @@
 								<phase>generate-sources</phase>
 								<configuration>
 									<encoding>UTF-8</encoding>
-									<sourceRoot>${basedir}/generated/java/source/</sourceRoot>
+									<sourceRoot>${basedir}/target/generated-sources/</sourceRoot>
 									<wsdlOptions>
 										<wsdlOption>
 											<wsdl>${basedir}/WebContent/wsdl/ShapeCalcWebService.wsdl</wsdl>
